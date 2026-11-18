@@ -1,56 +1,53 @@
 #!/usr/bin/env Rscript
-# 02_red_string.R
-# Construye la red de interacción de proteínas (STRING) para los genes del
-# fenotipo, calcula sus propiedades topológicas y genera las figuras.
-#
-# Entrada:
-#   - Tabla de genes de HPO separada por tabuladores, con columnas "id" y "name"
-#     (por defecto ../results/genes.tsv)
-#
-# Salidas (en la carpeta indicada con -o, por defecto ../results):
-#   - genes_no_mapeados.txt     Genes de HPO que no se encuentran en STRING
-#
-# Estado: versión 1 (lee los genes y los busca en STRING).
-# Pendiente: interacciones, propiedades de la red y figuras.
-#
-# Uso (desde la carpeta code):
-#   ./02_red_string.R -i ../results/genes.tsv -o ../results -s 800
+# Script de la red de STRING
+# Lee los genes del fenotipo, los busca en STRING y guarda las interacciones.
+# Se ejecuta desde la carpeta code: ./02_red_string.R
 
-suppressPackageStartupMessages({
-  library(optparse)
-  library(STRINGdb)
-})
+library(optparse)
+library(STRINGdb)
 
-# Argumentos
+# Opciones del script (como en el ejercicio del manual)
 option_list <- list(
   make_option(c("-i", "--genes"), type = "character", default = "../results/genes.tsv",
-              help = "Tabla de genes de HPO (columnas id y name) [default: %default]"),
+              help = "Archivo con los genes del HPO"),
   make_option(c("-o", "--outdir"), type = "character", default = "../results",
-              help = "Carpeta donde se guardan los resultados [default: %default]"),
+              help = "Carpeta de resultados"),
   make_option(c("-s", "--score"), type = "integer", default = 800,
-              help = "Umbral de puntuación de STRING (0-1000) [default: %default]")
+              help = "Puntuacion minima de STRING")
 )
 opt <- parse_args(OptionParser(option_list = option_list))
 
-dir.create(opt$outdir, showWarnings = FALSE, recursive = TRUE)
-string_dir <- file.path(opt$outdir, "string_data")
-dir.create(string_dir, showWarnings = FALSE)
-
-# 1. Leer los genes del fenotipo
-genes <- read.delim(opt$genes, sep = "\t", header = TRUE, stringsAsFactors = FALSE)
+# 1. Leer los genes
+genes <- read.delim(opt$genes, header = TRUE)
 genes$name <- trimws(genes$name)
-genes <- genes[genes$name != "", , drop = FALSE]
-cat("Genes del fenotipo (HPO):", nrow(genes), "\n")
+cat("Genes del HPO:", nrow(genes), "\n")
 
-# 2. Buscar los genes en STRING
-# Versión fija para que los resultados no cambien cuando salga una nueva.
+# 2. Buscar los genes en STRING (humano = 9606)
 string_db <- STRINGdb$new(version = "12.5", species = 9606,
                           score_threshold = opt$score,
-                          input_directory = string_dir)
-
+                          input_directory = file.path(opt$outdir, "string_data"))
 string_ids <- string_db$map(genes, "name", removeUnmappedRows = TRUE)
-no_mapeados <- setdiff(genes$name, string_ids$name)
-writeLines(no_mapeados, file.path(opt$outdir, "genes_no_mapeados.txt"))
-cat("Genes encontrados en STRING:", nrow(string_ids), "\n")
-cat("Genes NO encontrados en STRING:", length(no_mapeados), "\n")
+cat("\n")
 
+# Genes que no estan en STRING
+no_mapeados <- setdiff(genes$name, string_ids$name)
+cat("Genes encontrados en STRING:", nrow(string_ids), "\n")
+cat("Genes no encontrados:", length(no_mapeados), "\n")
+writeLines(no_mapeados, file.path(opt$outdir, "genes_no_mapeados.txt"))
+
+# 3. Interacciones entre nuestros genes
+red <- string_db$get_interactions(string_ids$STRING_id)
+red <- unique(red[, c("from", "to", "combined_score")])
+
+# Poner el nombre del gen en vez del codigo de STRING
+red$from <- string_ids$name[match(red$from, string_ids$STRING_id)]
+red$to <- string_ids$name[match(red$to, string_ids$STRING_id)]
+
+# Quitar las repetidas (A-B y B-A es la misma interaccion)
+pares <- paste(pmin(red$from, red$to), pmax(red$from, red$to))
+red <- red[!duplicated(pares), ]
+cat("Interacciones en la red:", nrow(red), "\n")
+
+# Guardar la red
+write.table(red, file.path(opt$outdir, "red_string.tsv"),
+            sep = "\t", quote = FALSE, row.names = FALSE)
