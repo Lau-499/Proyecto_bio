@@ -4,7 +4,6 @@
 !/results/to_Remove
 
 # Librerias de R instaladas localmente
-/software/
 /R_LIBS/
 /code/R_LIBS/
 
@@ -13,6 +12,3 @@
 .RData
 .Rproj.user/
 
-# Archivos temporales
-*.tmp
-*.Rout
