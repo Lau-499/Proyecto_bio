@@ -1,0 +1,18 @@
+
+# Resultados generados por los scripts
+/results/*
+!/results/to_Remove
+
+# Librerias de R instaladas localmente
+/software/
+/R_LIBS/
+/code/R_LIBS/
+
+# Archivos temporales de R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Archivos temporales
+*.tmp
+*.Rout
