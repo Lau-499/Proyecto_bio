@@ -25,3 +25,10 @@ enrich_global <- enrichGO(gene=genes, OrgDb=org.Hs.eg.db, keyType="SYMBOL",
                           pvalueCutoff=0.05, qvalueCutoff=0.2)
 write.csv2(as.data.frame(enrich_global),
            file=file.path(opt$outdir, "GO_global.csv"), row.names=FALSE)
+
+# 3: Grafica del enriquecimiento global
+if (nrow(as.data.frame(enrich_global)) > 0) {
+  pdf(file.path(opt$outdir, "GO_global_dotplot.pdf"))
+  print(dotplot(enrich_global, showCategory=10, title="GO Enrichment (BP)"))
+  dev.off()
+}
