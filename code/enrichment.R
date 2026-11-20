@@ -14,7 +14,14 @@ option_list <- list(
 opt <- parse_args(OptionParser(option_list=option_list))
 dir.create(opt$outdir, showWarnings=FALSE, recursive=TRUE)
 
-# Lectura de genes
+# 1: Lectura de genes
 genes_table <- read.table(opt$genes, sep="\t", header=TRUE, strip.white=TRUE)
 genes <- trimws(genes_table[, ncol(genes_table)])
 cat("Numero de genes:", length(genes), "\n")
+
+# 2: Enriquecimiento global
+enrich_global <- enrichGO(gene=genes, OrgDb=org.Hs.eg.db, keyType="SYMBOL",
+                          ont="BP", pAdjustMethod="BH",
+                          pvalueCutoff=0.05, qvalueCutoff=0.2)
+write.csv2(as.data.frame(enrich_global),
+           file=file.path(opt$outdir, "GO_global.csv"), row.names=FALSE)
