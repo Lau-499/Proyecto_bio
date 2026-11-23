@@ -1,8 +1,8 @@
 #!/usr/bin/env Rscript
-#propiedades de la red y clustering
-#lee la red de STRING (02_red_string.R), busca comunidades con Louvain
-# y guarda a que cluster pertenece cada gen
-#se ejecuta desde la carpeta code: ./03_propiedades_clustering.R
+# Propiedades de la red y clustering
+# Lee la red de STRING (02_red_string.R), calcula sus propiedades,
+# busca comunidades con Louvain y guarda a que cluster pertenece cada gen.
+# Se ejecuta desde la carpeta code: ./03_propiedades_clustering.R
 
 library(optparse)
 library(igraph)
@@ -15,20 +15,45 @@ option_list <- list(
 )
 opt <- parse_args(OptionParser(option_list = option_list))
 
-#leer la red y pasarla a igraph
+# 1. Leer la red y pasarla a igraph
 red <- read.delim(opt$red, header = TRUE)
 g <- graph_from_data_frame(red[, c("from", "to")], directed = FALSE)
 cat("Nodos:", gorder(g), "\n")
 cat("Aristas:", gsize(g), "\n")
 
-#clustering con Louvain
+# 2. Propiedades de la red
+grados <- degree(g)
+densidad <- edge_density(g)
+propiedades <- data.frame(
+  propiedad = c("nodos", "aristas", "grado_medio", "densidad", "dispersion",
+                "componentes", "transitividad", "longitud_media_camino",
+                "diametro", "asortatividad"),
+  valor = c(gorder(g), gsize(g), mean(grados), densidad, 1 - densidad,
+            components(g)$no, transitivity(g), mean_distance(g),
+            diameter(g), assortativity_degree(g))
+)
+print(propiedades)
+write.table(propiedades, file.path(opt$outdir, "propiedades_red.tsv"),
+            sep = "\t", quote = FALSE, row.names = FALSE)
+
+# Centralidad de cada gen
+# La red no es conexa, asi que usamos la centralidad armonica en vez de closeness
+centralidad <- data.frame(gene = V(g)$name, grado = grados,
+                          armonica = harmonic_centrality(g))
+centralidad <- centralidad[order(centralidad$grado, decreasing = TRUE), ]
+cat("Genes con mas conexiones:\n")
+print(head(centralidad, 10))
+write.table(centralidad, file.path(opt$outdir, "centralidad_genes.tsv"),
+            sep = "\t", quote = FALSE, row.names = FALSE)
+
+# 3. Clustering con Louvain
 set.seed(123)
 communities <- cluster_louvain(g)
 cat("Numero de clusters:", length(communities), "\n")
 cat("Modularidad:", modularity(communities), "\n")
 print(sizes(communities))
 
-#guardar el cluster de cada gen
+# 4. Guardar el cluster de cada gen
 clusters <- data.frame(gene = V(g)$name, cluster = membership(communities))
 write.table(clusters, file.path(opt$outdir, "clusters.tsv"),
             sep = "\t", quote = FALSE, row.names = FALSE)
