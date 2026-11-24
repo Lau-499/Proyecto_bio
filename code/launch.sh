@@ -20,7 +20,7 @@ Rscript 02_red_string.R \
 -s 800
 
 # Propiedades de la red y clustering
-Rscript 033_propiedades_clustering.R \
+Rscript 03_propiedades_clustering.R \
 -i ../results/red_string.tsv \
 -o ../results
 
