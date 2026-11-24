@@ -57,3 +57,12 @@ print(sizes(communities))
 clusters <- data.frame(gene = V(g)$name, cluster = membership(communities))
 write.table(clusters, file.path(opt$outdir, "clusters.tsv"),
             sep = "\t", quote = FALSE, row.names = FALSE)
+
+# 5. Figura de los clusters
+set.seed(123)
+layout <- layout_with_fr(g)
+
+pdf(file.path(opt$outdir, "red_clusters.pdf"))
+plot(communities, g, layout = layout, vertex.size = 8,
+     vertex.label.cex = 0.6, main = "Clustering con Louvain")
+dev.off()
