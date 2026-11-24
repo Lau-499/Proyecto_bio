@@ -18,3 +18,14 @@ Rscript 02_red_string.R \
 -i ../results/genes.tsv \
 -o ../results \
 -s 800
+
+# Propiedades de la red y clustering
+Rscript 033_propiedades_clustering.R \
+-i ../results/red_string.tsv \
+-o ../results
+
+# Ejecutar el analisis de enriquecimiento (global y por clusters)
+Rscript enrichment.R \
+-g ../results/genes.tsv \
+-c ../results/clusters.tsv \
+-o ../results/enrichment
