@@ -1,10 +1,12 @@
 #!/usr/bin/env Rscript
 # Script de la red de STRING
-# Lee los genes del fenotipo, los busca en STRING y guarda las interacciones.
+# Lee los genes del fenotipo, los busca en STRING, guarda las interacciones
+# y dibuja la red.
 # Se ejecuta desde la carpeta code: ./02_red_string.R
 
 library(optparse)
 library(STRINGdb)
+library(igraph)
 
 # Opciones del script (como en el ejercicio del manual)
 option_list <- list(
@@ -51,3 +53,20 @@ cat("Interacciones en la red:", nrow(red), "\n")
 # Guardar la red
 write.table(red, file.path(opt$outdir, "red_string.tsv"),
             sep = "\t", quote = FALSE, row.names = FALSE)
+
+# 4. Dibujar la red
+# El tamano de cada gen depende de cuantas conexiones tiene (su grado)
+g <- graph_from_data_frame(red, directed = FALSE)
+grado <- degree(g)
+
+set.seed(123)  # para que el dibujo salga siempre igual
+pdf(file.path(opt$outdir, "red_string.pdf"), width = 10, height = 10)
+plot(g, layout = layout_with_fr(g),
+     vertex.size = 4 + 2 * sqrt(grado),
+     vertex.color = "skyblue",
+     vertex.label.cex = 0.7,
+     vertex.label.color = "black",
+     edge.width = 0.8,
+     main = "Red de STRING del embarazo ectopico (HP:0031456)")
+invisible(dev.off())
+cat("Figura guardada en red_string.pdf\n")
