@@ -1,0 +1,234 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{5}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem{Mullany2023}
+\begin{botherref}
+\oauthor{\bsnm{Mullany}, \binits{K.}},
+\oauthor{\bsnm{Minneci}, \binits{M.}},
+\oauthor{\bsnm{Monjazeb}, \binits{R.}},
+\oauthor{\bsnm{Coiado}, \binits{O.C.}}:
+Overview of ectopic pregnancy diagnosis, management, and innovation.
+SAGE Publications Ltd
+(2023).
+doi:\doiurl{10.1177/17455057231160349}
+\end{botherref}
+\endbibitem
+
+%%% 2
+\bibitem{Papageorgiou2025}
+\begin{botherref}
+\oauthor{\bsnm{Papageorgiou}, \binits{D.}},
+\oauthor{\bsnm{Sapantzoglou}, \binits{I.}},
+\oauthor{\bsnm{Prokopakis}, \binits{I.}},
+\oauthor{\bsnm{Zachariou}, \binits{E.}}:
+Tubal Ectopic Pregnancy: From Diagnosis to Treatment.
+Multidisciplinary Digital Publishing Institute (MDPI)
+(2025).
+doi:\doiurl{10.3390/biomedicines13061465}
+\end{botherref}
+\endbibitem
+
+%%% 3
+\bibitem{Brim2025}
+\begin{botherref}
+\oauthor{\bsnm{Brim}, \binits{A.C.S.}},
+\oauthor{\bsnm{Barretto}, \binits{V.R.D.}},
+\oauthor{\bsnm{Reis-Oliveira}, \binits{J.G.}},
+\oauthor{\bparticle{da~Silveira~de} \bsnm{Araújo}, \binits{R.B.}},
+\oauthor{\bsnm{Romeo}, \binits{A.C.D.C.B.}}:
+Risk factors for ectopic pregnancy occurrence: Systematic review and
+  meta-analysis.
+John Wiley and Sons Ltd
+(2025).
+doi:\doiurl{10.1002/ijgo.15965}
+\end{botherref}
+\endbibitem
+
+%%% 4
+\bibitem{Jiang2022}
+\begin{botherref}
+\oauthor{\bsnm{Jiang}, \binits{R.}},
+\oauthor{\bsnm{Tang}, \binits{X.}},
+\oauthor{\bsnm{Pan}, \binits{J.}},
+\oauthor{\bsnm{Li}, \binits{G.}},
+\oauthor{\bsnm{Yang}, \binits{N.}},
+\oauthor{\bsnm{Tang}, \binits{Y.}},
+\oauthor{\bsnm{Bi}, \binits{S.}},
+\oauthor{\bsnm{Cai}, \binits{H.}},
+\oauthor{\bsnm{Chen}, \binits{Q.}},
+\oauthor{\bsnm{Chen}, \binits{D.}},
+\oauthor{\bsnm{Wang}, \binits{H.}},
+\oauthor{\bsnm{Kong}, \binits{S.}}:
+Cdc42 governs normal oviduct multiciliogenesis through activating akt to ensure
+  timely embryo transport.
+Cell Death and Disease
+\textbf{13}
+(2022).
+doi:\doiurl{10.1038/s41419-022-05184-y}
+\end{botherref}
+\endbibitem
+
+%%% 5
+\bibitem{Scully2025}
+\begin{barticle}
+\bauthor{\bsnm{Scully}, \binits{D.M.}},
+\bauthor{\bsnm{Xia}, \binits{T.}},
+\bauthor{\bsnm{Musina}, \binits{G.R.}},
+\bauthor{\bsnm{McCown}, \binits{M.A.}},
+\bauthor{\bsnm{Umezu}, \binits{K.}},
+\bauthor{\bsnm{Kircher}, \binits{B.K.}},
+\bauthor{\bsnm{Behringer}, \binits{R.R.}},
+\bauthor{\bsnm{Larina}, \binits{I.V.}}:
+\batitle{Region-specific roles of oviductal motile cilia in oocyte/embryo
+  transport and fertility}.
+\bjtitle{Biology of Reproduction}
+\bvolume{112},
+\bfpage{651}--\blpage{662}
+(\byear{2025}).
+doi:\doiurl{10.1093/biolre/ioaf005}
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+  <title><p>Overview of ectopic pregnancy diagnosis, management, and
+  innovation</p></title>
+  <aug>
+    <au><snm>Mullany</snm><fnm>K</fnm></au>
+    <au><snm>Minneci</snm><fnm>M</fnm></au>
+    <au><snm>Monjazeb</snm><fnm>R</fnm></au>
+    <au><snm>Coiado</snm><fnm>OC</fnm></au>
+  </aug>
+  <source>Women's Health</source>
+  <publisher>SAGE Publications Ltd</publisher>
+  <pubdate>2023</pubdate>
+  <volume>19</volume>
+</bibl>
+
+<bibl id="B2">
+  <title><p>Tubal Ectopic Pregnancy: From Diagnosis to Treatment</p></title>
+  <aug>
+    <au><snm>Papageorgiou</snm><fnm>D</fnm></au>
+    <au><snm>Sapantzoglou</snm><fnm>I</fnm></au>
+    <au><snm>Prokopakis</snm><fnm>I</fnm></au>
+    <au><snm>Zachariou</snm><fnm>E</fnm></au>
+  </aug>
+  <source>Biomedicines</source>
+  <publisher>Multidisciplinary Digital Publishing Institute (MDPI)</publisher>
+  <pubdate>2025</pubdate>
+  <volume>13</volume>
+</bibl>
+
+<bibl id="B3">
+  <title><p>Risk factors for ectopic pregnancy occurrence: Systematic review
+  and meta-analysis</p></title>
+  <aug>
+    <au><snm>Brim</snm><fnm>ACS</fnm></au>
+    <au><snm>Barretto</snm><fnm>VRD</fnm></au>
+    <au><snm>Reis Oliveira</snm><fnm>JG</fnm></au>
+    <au><snm>Araújo</snm><fnm>RB</fnm></au>
+    <au><snm>Romeo</snm><fnm>ACDCB</fnm></au>
+  </aug>
+  <source>International Journal of Gynecology and Obstetrics</source>
+  <publisher>John Wiley and Sons Ltd</publisher>
+  <pubdate>2025</pubdate>
+  <volume>168</volume>
+  <fpage>919</fpage>
+  <lpage>932</lpage>
+</bibl>
+
+<bibl id="B4">
+  <title><p>CDC42 governs normal oviduct multiciliogenesis through activating
+  AKT to ensure timely embryo transport</p></title>
+  <aug>
+    <au><snm>Jiang</snm><fnm>R</fnm></au>
+    <au><snm>Tang</snm><fnm>X</fnm></au>
+    <au><snm>Pan</snm><fnm>J</fnm></au>
+    <au><snm>Li</snm><fnm>G</fnm></au>
+    <au><snm>Yang</snm><fnm>N</fnm></au>
+    <au><snm>Tang</snm><fnm>Y</fnm></au>
+    <au><snm>Bi</snm><fnm>S</fnm></au>
+    <au><snm>Cai</snm><fnm>H</fnm></au>
+    <au><snm>Chen</snm><fnm>Q</fnm></au>
+    <au><snm>Chen</snm><fnm>D</fnm></au>
+    <au><snm>Wang</snm><fnm>H</fnm></au>
+    <au><snm>Kong</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Cell Death and Disease</source>
+  <publisher>Springer Nature</publisher>
+  <pubdate>2022</pubdate>
+  <volume>13</volume>
+</bibl>
+
+<bibl id="B5">
+  <title><p>Region-specific roles of oviductal motile cilia in oocyte/embryo
+  transport and fertility</p></title>
+  <aug>
+    <au><snm>Scully</snm><fnm>DM</fnm></au>
+    <au><snm>Xia</snm><fnm>T</fnm></au>
+    <au><snm>Musina</snm><fnm>GR</fnm></au>
+    <au><snm>McCown</snm><fnm>MA</fnm></au>
+    <au><snm>Umezu</snm><fnm>K</fnm></au>
+    <au><snm>Kircher</snm><fnm>BK</fnm></au>
+    <au><snm>Behringer</snm><fnm>RR</fnm></au>
+    <au><snm>Larina</snm><fnm>IV</fnm></au>
+  </aug>
+  <source>Biology of Reproduction</source>
+  <publisher>Oxford University Press</publisher>
+  <pubdate>2025</pubdate>
+  <volume>112</volume>
+  <fpage>651</fpage>
+  <lpage>662</lpage>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment
