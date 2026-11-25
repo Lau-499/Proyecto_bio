@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{5}
+\begin{thebibliography}{8}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -87,6 +87,21 @@ doi:\doiurl{10.1002/ijgo.15965}
 \endbibitem
 
 %%% 4
+\bibitem{Wloga2024}
+\begin{botherref}
+\oauthor{\bsnm{Wloga}, \binits{D.}},
+\oauthor{\bsnm{Joachimiak}, \binits{E.}},
+\oauthor{\bsnm{Osinka}, \binits{A.}},
+\oauthor{\bsnm{Ahmadi}, \binits{S.}},
+\oauthor{\bsnm{Majhi}, \binits{S.}}:
+Motile Cilia in Female and Male Reproductive Tracts and Fertility.
+Multidisciplinary Digital Publishing Institute (MDPI)
+(2024).
+doi:\doiurl{10.3390/cells13231974}
+\end{botherref}
+\endbibitem
+
+%%% 5
 \bibitem{Jiang2022}
 \begin{botherref}
 \oauthor{\bsnm{Jiang}, \binits{R.}},
@@ -110,7 +125,7 @@ doi:\doiurl{10.1038/s41419-022-05184-y}
 \end{botherref}
 \endbibitem
 
-%%% 5
+%%% 6
 \bibitem{Scully2025}
 \begin{barticle}
 \bauthor{\bsnm{Scully}, \binits{D.M.}},
@@ -128,6 +143,222 @@ doi:\doiurl{10.1038/s41419-022-05184-y}
 \bfpage{651}--\blpage{662}
 (\byear{2025}).
 doi:\doiurl{10.1093/biolre/ioaf005}
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem{Gargano2024}
+\begin{barticle}
+\bauthor{\bsnm{Gargano}, \binits{M.A.}},
+\bauthor{\bsnm{Matentzoglu}, \binits{N.}},
+\bauthor{\bsnm{Coleman}, \binits{B.}},
+\bauthor{\bsnm{Addo-Lartey}, \binits{E.B.}},
+\bauthor{\bsnm{Anagnostopoulos}, \binits{A.V.}},
+\bauthor{\bsnm{Anderton}, \binits{J.}},
+\bauthor{\bsnm{Avillach}, \binits{P.}},
+\bauthor{\bsnm{Bagley}, \binits{A.M.}},
+\bauthor{\bsnm{Bakštein}, \binits{E.}},
+\bauthor{\bsnm{Balhoff}, \binits{J.P.}},
+\bauthor{\bsnm{Baynam}, \binits{G.}},
+\bauthor{\bsnm{Bello}, \binits{S.M.}},
+\bauthor{\bsnm{Berk}, \binits{M.}},
+\bauthor{\bsnm{Bertram}, \binits{H.}},
+\bauthor{\bsnm{Bishop}, \binits{S.}},
+\bauthor{\bsnm{Blau}, \binits{H.}},
+\bauthor{\bsnm{Bodenstein}, \binits{D.F.}},
+\bauthor{\bsnm{Botas}, \binits{P.}},
+\bauthor{\bsnm{Boztug}, \binits{K.}},
+\bauthor{\bsnm{Čady}, \binits{J.}},
+\bauthor{\bsnm{Callahan}, \binits{T.J.}},
+\bauthor{\bsnm{Cameron}, \binits{R.}},
+\bauthor{\bsnm{Carbon}, \binits{S.J.}},
+\bauthor{\bsnm{Castellanos}, \binits{F.}},
+\bauthor{\bsnm{Caufield}, \binits{J.H.}},
+\bauthor{\bsnm{Chan}, \binits{L.E.}},
+\bauthor{\bsnm{Chute}, \binits{C.G.}},
+\bauthor{\bsnm{Cruz-Rojo}, \binits{J.}},
+\bauthor{\bsnm{Dahan-Oliel}, \binits{N.}},
+\bauthor{\bsnm{Davids}, \binits{J.R.}},
+\bauthor{\bsnm{Dieuleveult}, \binits{M.}},
+\bauthor{\bsnm{Souza}, \binits{V.}},
+\bauthor{\bparticle{de} \bsnm{Vries}, \binits{B.B.A.}},
+\bauthor{\bsnm{Vries}, \binits{E.}},
+\bauthor{\bsnm{DePaulo}, \binits{J.R.}},
+\bauthor{\bsnm{Derfalvi}, \binits{B.}},
+\bauthor{\bsnm{Dhombres}, \binits{F.}},
+\bauthor{\bsnm{Diaz-Byrd}, \binits{C.}},
+\bauthor{\bsnm{Dingemans}, \binits{A.J.M.}},
+\bauthor{\bsnm{Donadille}, \binits{B.}},
+\bauthor{\bsnm{Duyzend}, \binits{M.}},
+\bauthor{\bsnm{Elfeky}, \binits{R.}},
+\bauthor{\bsnm{Essaid}, \binits{S.}},
+\bauthor{\bsnm{Fabrizzi}, \binits{C.}},
+\bauthor{\bsnm{Fico}, \binits{G.}},
+\bauthor{\bsnm{Firth}, \binits{H.V.}},
+\bauthor{\bsnm{Freudenberg-Hua}, \binits{Y.}},
+\bauthor{\bsnm{Fullerton}, \binits{J.M.}},
+\bauthor{\bsnm{Gabriel}, \binits{D.L.}},
+\bauthor{\bsnm{Gilmour}, \binits{K.}},
+\bauthor{\bsnm{Giordano}, \binits{J.}},
+\bauthor{\bsnm{Goes}, \binits{F.S.}},
+\bauthor{\bsnm{Moses}, \binits{R.G.}},
+\bauthor{\bsnm{Green}, \binits{I.}},
+\bauthor{\bsnm{Griese}, \binits{M.}},
+\bauthor{\bsnm{Groza}, \binits{T.}},
+\bauthor{\bsnm{Gu}, \binits{W.}},
+\bauthor{\bsnm{Guthrie}, \binits{J.}},
+\bauthor{\bsnm{Gyori}, \binits{B.}},
+\bauthor{\bsnm{Hamosh}, \binits{A.}},
+\bauthor{\bsnm{Hanauer}, \binits{M.}},
+\bauthor{\bsnm{Hanušová}, \binits{K.}},
+\bauthor{\bsnm{He}, \binits{Y.}},
+\bauthor{\bsnm{Hegde}, \binits{H.}},
+\bauthor{\bsnm{Helbig}, \binits{I.}},
+\bauthor{\bsnm{Holasová}, \binits{K.}},
+\bauthor{\bsnm{Hoyt}, \binits{C.T.}},
+\bauthor{\bsnm{Huang}, \binits{S.}},
+\bauthor{\bsnm{Hurwitz}, \binits{E.}},
+\bauthor{\bsnm{Jacobsen}, \binits{J.O.B.}},
+\bauthor{\bsnm{Jiang}, \binits{X.}},
+\bauthor{\bsnm{Joseph}, \binits{L.}},
+\bauthor{\bsnm{Keramatian}, \binits{K.}},
+\bauthor{\bsnm{King}, \binits{B.}},
+\bauthor{\bsnm{Knoflach}, \binits{K.}},
+\bauthor{\bsnm{Koolen}, \binits{D.A.}},
+\bauthor{\bsnm{Kraus}, \binits{M.L.}},
+\bauthor{\bsnm{Kroll}, \binits{C.}},
+\bauthor{\bsnm{Kusters}, \binits{M.}},
+\bauthor{\bsnm{Ladewig}, \binits{M.S.}},
+\bauthor{\bsnm{Lagorce}, \binits{D.}},
+\bauthor{\bsnm{Lai}, \binits{M.C.}},
+\bauthor{\bsnm{Lapunzina}, \binits{P.}},
+\bauthor{\bsnm{Laraway}, \binits{B.}},
+\bauthor{\bsnm{Lewis-Smith}, \binits{D.}},
+\bauthor{\bsnm{Li}, \binits{X.}},
+\bauthor{\bsnm{Lucano}, \binits{C.}},
+\bauthor{\bsnm{Majd}, \binits{M.}},
+\bauthor{\bsnm{Marazita}, \binits{M.L.}},
+\bauthor{\bsnm{Martinez-Glez}, \binits{V.}},
+\bauthor{\bsnm{McHenry}, \binits{T.H.}},
+\bauthor{\bsnm{McInnis}, \binits{M.G.}},
+\bauthor{\bsnm{McMurry}, \binits{J.A.}},
+\bauthor{\bsnm{Mihulová}, \binits{M.}},
+\bauthor{\bsnm{Millett}, \binits{C.E.}},
+\bauthor{\bsnm{Mitchell}, \binits{P.B.}},
+\bauthor{\bsnm{Moslerová}, \binits{V.}},
+\bauthor{\bsnm{Narutomi}, \binits{K.}},
+\bauthor{\bsnm{Nematollahi}, \binits{S.}},
+\bauthor{\bsnm{Nevado}, \binits{J.}},
+\bauthor{\bsnm{Nierenberg}, \binits{A.A.}},
+\bauthor{\bsnm{Čajbiková}, \binits{N.N.}},
+\bauthor{\bsnm{Nurnberger}, \binits{J.I.}},
+\bauthor{\bsnm{Ogishima}, \binits{S.}},
+\bauthor{\bsnm{Olson}, \binits{D.}},
+\bauthor{\bsnm{Ortiz}, \binits{A.}},
+\bauthor{\bsnm{Pachajoa}, \binits{H.}},
+\bauthor{\bsnm{Nanclares}, \binits{G.P.}},
+\bauthor{\bsnm{Peters}, \binits{A.}},
+\bauthor{\bsnm{Putman}, \binits{T.}},
+\bauthor{\bsnm{Rapp}, \binits{C.K.}},
+\bauthor{\bsnm{Rath}, \binits{A.}},
+\bauthor{\bsnm{Reese}, \binits{J.}},
+\bauthor{\bsnm{Rekerle}, \binits{L.}},
+\bauthor{\bsnm{Roberts}, \binits{A.M.}},
+\bauthor{\bsnm{Roy}, \binits{S.}},
+\bauthor{\bsnm{Sanders}, \binits{S.J.}},
+\bauthor{\bsnm{Schuetz}, \binits{C.}},
+\bauthor{\bsnm{Schulte}, \binits{E.C.}},
+\bauthor{\bsnm{Schulze}, \binits{T.G.}},
+\bauthor{\bsnm{Schwarz}, \binits{M.}},
+\bauthor{\bsnm{Scott}, \binits{K.}},
+\bauthor{\bsnm{Seelow}, \binits{D.}},
+\bauthor{\bsnm{Seitz}, \binits{B.}},
+\bauthor{\bsnm{Shen}, \binits{Y.}},
+\bauthor{\bsnm{Similuk}, \binits{M.N.}},
+\bauthor{\bsnm{Simon}, \binits{E.S.}},
+\bauthor{\bsnm{Singh}, \binits{B.}},
+\bauthor{\bsnm{Smedley}, \binits{D.}},
+\bauthor{\bsnm{Smith}, \binits{C.L.}},
+\bauthor{\bsnm{Smolinsky}, \binits{J.T.}},
+\bauthor{\bsnm{Sperry}, \binits{S.}},
+\bauthor{\bsnm{Stafford}, \binits{E.}},
+\bauthor{\bsnm{Stefancsik}, \binits{R.}},
+\bauthor{\bsnm{Steinhaus}, \binits{R.}},
+\bauthor{\bsnm{Strawbridge}, \binits{R.}},
+\bauthor{\bsnm{Sundaramurthi}, \binits{J.C.}},
+\bauthor{\bsnm{Talapova}, \binits{P.}},
+\bauthor{\bsnm{Castano}, \binits{J.A.T.}},
+\bauthor{\bsnm{Tesner}, \binits{P.}},
+\bauthor{\bsnm{Thomas}, \binits{R.H.}},
+\bauthor{\bsnm{Thurm}, \binits{A.}},
+\bauthor{\bsnm{Turnovec}, \binits{M.}},
+\bauthor{\bparticle{van} \bsnm{Gijn}, \binits{M.E.}},
+\bauthor{\bsnm{Vasilevsky}, \binits{N.A.}},
+\bauthor{\bsnm{Vlčková}, \binits{M.}},
+\bauthor{\bsnm{Walden}, \binits{A.}},
+\bauthor{\bsnm{Wang}, \binits{K.}},
+\bauthor{\bsnm{Wapner}, \binits{R.}},
+\bauthor{\bsnm{Ware}, \binits{J.S.}},
+\bauthor{\bsnm{Wiafe}, \binits{A.A.}},
+\bauthor{\bsnm{Wiafe}, \binits{S.A.}},
+\bauthor{\bsnm{Wiggins}, \binits{L.D.}},
+\bauthor{\bsnm{Williams}, \binits{A.E.}},
+\bauthor{\bsnm{Wu}, \binits{C.}},
+\bauthor{\bsnm{Wyrwoll}, \binits{M.J.}},
+\bauthor{\bsnm{Xiong}, \binits{H.}},
+\bauthor{\bsnm{Yalin}, \binits{N.}},
+\bauthor{\bsnm{Yamamoto}, \binits{Y.}},
+\bauthor{\bsnm{Yatham}, \binits{L.N.}},
+\bauthor{\bsnm{Yocum}, \binits{A.K.}},
+\bauthor{\bsnm{Young}, \binits{A.H.}},
+\bauthor{\bsnm{Yüksel}, \binits{Z.}},
+\bauthor{\bsnm{Zandi}, \binits{P.P.}},
+\bauthor{\bsnm{Zankl}, \binits{A.}},
+\bauthor{\bsnm{Zarante}, \binits{I.}},
+\bauthor{\bsnm{Zvolský}, \binits{M.}},
+\bauthor{\bsnm{Toro}, \binits{S.}},
+\bauthor{\bsnm{Carmody}, \binits{L.C.}},
+\bauthor{\bsnm{Harris}, \binits{N.L.}},
+\bauthor{\bsnm{Munoz-Torres}, \binits{M.C.}},
+\bauthor{\bsnm{Danis}, \binits{D.}},
+\bauthor{\bsnm{Mungall}, \binits{C.J.}},
+\bauthor{\bsnm{Köhler}, \binits{S.}},
+\bauthor{\bsnm{Haendel}, \binits{M.A.}},
+\bauthor{\bsnm{Robinson}, \binits{P.N.}}:
+\batitle{The human phenotype ontology in 2024: phenotypes around the world}.
+\bjtitle{Nucleic Acids Research}
+\bvolume{52},
+\bfpage{1333}--\blpage{1346}
+(\byear{2024}).
+doi:\doiurl{10.1093/nar/gkad1005}
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem{Szklarczyk2025}
+\begin{barticle}
+\bauthor{\bsnm{Szklarczyk}, \binits{D.}},
+\bauthor{\bsnm{Nastou}, \binits{K.}},
+\bauthor{\bsnm{Koutrouli}, \binits{M.}},
+\bauthor{\bsnm{Kirsch}, \binits{R.}},
+\bauthor{\bsnm{Mehryary}, \binits{F.}},
+\bauthor{\bsnm{Hachilif}, \binits{R.}},
+\bauthor{\bsnm{Hu}, \binits{D.}},
+\bauthor{\bsnm{Peluso}, \binits{M.E.}},
+\bauthor{\bsnm{Huang}, \binits{Q.}},
+\bauthor{\bsnm{Fang}, \binits{T.}},
+\bauthor{\bsnm{Doncheva}, \binits{N.T.}},
+\bauthor{\bsnm{Pyysalo}, \binits{S.}},
+\bauthor{\bsnm{Bork}, \binits{P.}},
+\bauthor{\bsnm{Jensen}, \binits{L.J.}},
+\bauthor{\bsnm{Mering}, \binits{C.V.}}:
+\batitle{The string database in 2025: protein networks with directionality of
+  regulation}.
+\bjtitle{Nucleic Acids Research}
+\bvolume{53},
+\bfpage{730}--\blpage{737}
+(\byear{2025}).
+doi:\doiurl{10.1093/nar/gkae1113}
 \end{barticle}
 \endbibitem
 
@@ -187,6 +418,22 @@ doi:\doiurl{10.1093/biolre/ioaf005}
 </bibl>
 
 <bibl id="B4">
+  <title><p>Motile Cilia in Female and Male Reproductive Tracts and
+  Fertility</p></title>
+  <aug>
+    <au><snm>Wloga</snm><fnm>D</fnm></au>
+    <au><snm>Joachimiak</snm><fnm>E</fnm></au>
+    <au><snm>Osinka</snm><fnm>A</fnm></au>
+    <au><snm>Ahmadi</snm><fnm>S</fnm></au>
+    <au><snm>Majhi</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Cells</source>
+  <publisher>Multidisciplinary Digital Publishing Institute (MDPI)</publisher>
+  <pubdate>2024</pubdate>
+  <volume>13</volume>
+</bibl>
+
+<bibl id="B5">
   <title><p>CDC42 governs normal oviduct multiciliogenesis through activating
   AKT to ensure timely embryo transport</p></title>
   <aug>
@@ -209,7 +456,7 @@ doi:\doiurl{10.1093/biolre/ioaf005}
   <volume>13</volume>
 </bibl>
 
-<bibl id="B5">
+<bibl id="B6">
   <title><p>Region-specific roles of oviductal motile cilia in oocyte/embryo
   transport and fertility</p></title>
   <aug>
@@ -228,6 +475,223 @@ doi:\doiurl{10.1093/biolre/ioaf005}
   <volume>112</volume>
   <fpage>651</fpage>
   <lpage>662</lpage>
+</bibl>
+
+<bibl id="B7">
+  <title><p>The Human Phenotype Ontology in 2024: phenotypes around the
+  world</p></title>
+  <aug>
+    <au><snm>Gargano</snm><fnm>MA</fnm></au>
+    <au><snm>Matentzoglu</snm><fnm>N</fnm></au>
+    <au><snm>Coleman</snm><fnm>B</fnm></au>
+    <au><snm>Addo Lartey</snm><fnm>EB</fnm></au>
+    <au><snm>Anagnostopoulos</snm><fnm>AV</fnm></au>
+    <au><snm>Anderton</snm><fnm>J</fnm></au>
+    <au><snm>Avillach</snm><fnm>P</fnm></au>
+    <au><snm>Bagley</snm><fnm>AM</fnm></au>
+    <au><snm>Bakštein</snm><fnm>E</fnm></au>
+    <au><snm>Balhoff</snm><fnm>JP</fnm></au>
+    <au><snm>Baynam</snm><fnm>G</fnm></au>
+    <au><snm>Bello</snm><fnm>SM</fnm></au>
+    <au><snm>Berk</snm><fnm>M</fnm></au>
+    <au><snm>Bertram</snm><fnm>H</fnm></au>
+    <au><snm>Bishop</snm><fnm>S</fnm></au>
+    <au><snm>Blau</snm><fnm>H</fnm></au>
+    <au><snm>Bodenstein</snm><fnm>DF</fnm></au>
+    <au><snm>Botas</snm><fnm>P</fnm></au>
+    <au><snm>Boztug</snm><fnm>K</fnm></au>
+    <au><snm>Čady</snm><fnm>J</fnm></au>
+    <au><snm>Callahan</snm><fnm>TJ</fnm></au>
+    <au><snm>Cameron</snm><fnm>R</fnm></au>
+    <au><snm>Carbon</snm><fnm>SJ</fnm></au>
+    <au><snm>Castellanos</snm><fnm>F</fnm></au>
+    <au><snm>Caufield</snm><fnm>JH</fnm></au>
+    <au><snm>Chan</snm><fnm>LE</fnm></au>
+    <au><snm>Chute</snm><fnm>CG</fnm></au>
+    <au><snm>Cruz Rojo</snm><fnm>J</fnm></au>
+    <au><snm>Dahan Oliel</snm><fnm>N</fnm></au>
+    <au><snm>Davids</snm><fnm>JR</fnm></au>
+    <au><snm>Dieuleveult</snm><fnm>M</fnm></au>
+    <au><snm>Souza</snm><fnm>V</fnm></au>
+    <au><snm>Vries</snm><fnm>BB</fnm></au>
+    <au><snm>Vries</snm><fnm>E</fnm></au>
+    <au><snm>DePaulo</snm><fnm>JR</fnm></au>
+    <au><snm>Derfalvi</snm><fnm>B</fnm></au>
+    <au><snm>Dhombres</snm><fnm>F</fnm></au>
+    <au><snm>Diaz Byrd</snm><fnm>C</fnm></au>
+    <au><snm>Dingemans</snm><fnm>AJ</fnm></au>
+    <au><snm>Donadille</snm><fnm>B</fnm></au>
+    <au><snm>Duyzend</snm><fnm>M</fnm></au>
+    <au><snm>Elfeky</snm><fnm>R</fnm></au>
+    <au><snm>Essaid</snm><fnm>S</fnm></au>
+    <au><snm>Fabrizzi</snm><fnm>C</fnm></au>
+    <au><snm>Fico</snm><fnm>G</fnm></au>
+    <au><snm>Firth</snm><fnm>HV</fnm></au>
+    <au><snm>Freudenberg Hua</snm><fnm>Y</fnm></au>
+    <au><snm>Fullerton</snm><fnm>JM</fnm></au>
+    <au><snm>Gabriel</snm><fnm>DL</fnm></au>
+    <au><snm>Gilmour</snm><fnm>K</fnm></au>
+    <au><snm>Giordano</snm><fnm>J</fnm></au>
+    <au><snm>Goes</snm><fnm>FS</fnm></au>
+    <au><snm>Moses</snm><fnm>RG</fnm></au>
+    <au><snm>Green</snm><fnm>I</fnm></au>
+    <au><snm>Griese</snm><fnm>M</fnm></au>
+    <au><snm>Groza</snm><fnm>T</fnm></au>
+    <au><snm>Gu</snm><fnm>W</fnm></au>
+    <au><snm>Guthrie</snm><fnm>J</fnm></au>
+    <au><snm>Gyori</snm><fnm>B</fnm></au>
+    <au><snm>Hamosh</snm><fnm>A</fnm></au>
+    <au><snm>Hanauer</snm><fnm>M</fnm></au>
+    <au><snm>Hanušová</snm><fnm>K</fnm></au>
+    <au><snm>He</snm><fnm>Y</fnm></au>
+    <au><snm>Hegde</snm><fnm>H</fnm></au>
+    <au><snm>Helbig</snm><fnm>I</fnm></au>
+    <au><snm>Holasová</snm><fnm>K</fnm></au>
+    <au><snm>Hoyt</snm><fnm>CT</fnm></au>
+    <au><snm>Huang</snm><fnm>S</fnm></au>
+    <au><snm>Hurwitz</snm><fnm>E</fnm></au>
+    <au><snm>Jacobsen</snm><fnm>JO</fnm></au>
+    <au><snm>Jiang</snm><fnm>X</fnm></au>
+    <au><snm>Joseph</snm><fnm>L</fnm></au>
+    <au><snm>Keramatian</snm><fnm>K</fnm></au>
+    <au><snm>King</snm><fnm>B</fnm></au>
+    <au><snm>Knoflach</snm><fnm>K</fnm></au>
+    <au><snm>Koolen</snm><fnm>DA</fnm></au>
+    <au><snm>Kraus</snm><fnm>ML</fnm></au>
+    <au><snm>Kroll</snm><fnm>C</fnm></au>
+    <au><snm>Kusters</snm><fnm>M</fnm></au>
+    <au><snm>Ladewig</snm><fnm>MS</fnm></au>
+    <au><snm>Lagorce</snm><fnm>D</fnm></au>
+    <au><snm>Lai</snm><fnm>MC</fnm></au>
+    <au><snm>Lapunzina</snm><fnm>P</fnm></au>
+    <au><snm>Laraway</snm><fnm>B</fnm></au>
+    <au><snm>Lewis Smith</snm><fnm>D</fnm></au>
+    <au><snm>Li</snm><fnm>X</fnm></au>
+    <au><snm>Lucano</snm><fnm>C</fnm></au>
+    <au><snm>Majd</snm><fnm>M</fnm></au>
+    <au><snm>Marazita</snm><fnm>ML</fnm></au>
+    <au><snm>Martinez Glez</snm><fnm>V</fnm></au>
+    <au><snm>McHenry</snm><fnm>TH</fnm></au>
+    <au><snm>McInnis</snm><fnm>MG</fnm></au>
+    <au><snm>McMurry</snm><fnm>JA</fnm></au>
+    <au><snm>Mihulová</snm><fnm>M</fnm></au>
+    <au><snm>Millett</snm><fnm>CE</fnm></au>
+    <au><snm>Mitchell</snm><fnm>PB</fnm></au>
+    <au><snm>Moslerová</snm><fnm>V</fnm></au>
+    <au><snm>Narutomi</snm><fnm>K</fnm></au>
+    <au><snm>Nematollahi</snm><fnm>S</fnm></au>
+    <au><snm>Nevado</snm><fnm>J</fnm></au>
+    <au><snm>Nierenberg</snm><fnm>AA</fnm></au>
+    <au><snm>Čajbiková</snm><fnm>NN</fnm></au>
+    <au><snm>Nurnberger</snm><fnm>JI</fnm></au>
+    <au><snm>Ogishima</snm><fnm>S</fnm></au>
+    <au><snm>Olson</snm><fnm>D</fnm></au>
+    <au><snm>Ortiz</snm><fnm>A</fnm></au>
+    <au><snm>Pachajoa</snm><fnm>H</fnm></au>
+    <au><snm>Nanclares</snm><fnm>GP</fnm></au>
+    <au><snm>Peters</snm><fnm>A</fnm></au>
+    <au><snm>Putman</snm><fnm>T</fnm></au>
+    <au><snm>Rapp</snm><fnm>CK</fnm></au>
+    <au><snm>Rath</snm><fnm>A</fnm></au>
+    <au><snm>Reese</snm><fnm>J</fnm></au>
+    <au><snm>Rekerle</snm><fnm>L</fnm></au>
+    <au><snm>Roberts</snm><fnm>AM</fnm></au>
+    <au><snm>Roy</snm><fnm>S</fnm></au>
+    <au><snm>Sanders</snm><fnm>SJ</fnm></au>
+    <au><snm>Schuetz</snm><fnm>C</fnm></au>
+    <au><snm>Schulte</snm><fnm>EC</fnm></au>
+    <au><snm>Schulze</snm><fnm>TG</fnm></au>
+    <au><snm>Schwarz</snm><fnm>M</fnm></au>
+    <au><snm>Scott</snm><fnm>K</fnm></au>
+    <au><snm>Seelow</snm><fnm>D</fnm></au>
+    <au><snm>Seitz</snm><fnm>B</fnm></au>
+    <au><snm>Shen</snm><fnm>Y</fnm></au>
+    <au><snm>Similuk</snm><fnm>MN</fnm></au>
+    <au><snm>Simon</snm><fnm>ES</fnm></au>
+    <au><snm>Singh</snm><fnm>B</fnm></au>
+    <au><snm>Smedley</snm><fnm>D</fnm></au>
+    <au><snm>Smith</snm><fnm>CL</fnm></au>
+    <au><snm>Smolinsky</snm><fnm>JT</fnm></au>
+    <au><snm>Sperry</snm><fnm>S</fnm></au>
+    <au><snm>Stafford</snm><fnm>E</fnm></au>
+    <au><snm>Stefancsik</snm><fnm>R</fnm></au>
+    <au><snm>Steinhaus</snm><fnm>R</fnm></au>
+    <au><snm>Strawbridge</snm><fnm>R</fnm></au>
+    <au><snm>Sundaramurthi</snm><fnm>JC</fnm></au>
+    <au><snm>Talapova</snm><fnm>P</fnm></au>
+    <au><snm>Castano</snm><fnm>JA</fnm></au>
+    <au><snm>Tesner</snm><fnm>P</fnm></au>
+    <au><snm>Thomas</snm><fnm>RH</fnm></au>
+    <au><snm>Thurm</snm><fnm>A</fnm></au>
+    <au><snm>Turnovec</snm><fnm>M</fnm></au>
+    <au><snm>Gijn</snm><fnm>ME</fnm></au>
+    <au><snm>Vasilevsky</snm><fnm>NA</fnm></au>
+    <au><snm>Vlčková</snm><fnm>M</fnm></au>
+    <au><snm>Walden</snm><fnm>A</fnm></au>
+    <au><snm>Wang</snm><fnm>K</fnm></au>
+    <au><snm>Wapner</snm><fnm>R</fnm></au>
+    <au><snm>Ware</snm><fnm>JS</fnm></au>
+    <au><snm>Wiafe</snm><fnm>AA</fnm></au>
+    <au><snm>Wiafe</snm><fnm>SA</fnm></au>
+    <au><snm>Wiggins</snm><fnm>LD</fnm></au>
+    <au><snm>Williams</snm><fnm>AE</fnm></au>
+    <au><snm>Wu</snm><fnm>C</fnm></au>
+    <au><snm>Wyrwoll</snm><fnm>MJ</fnm></au>
+    <au><snm>Xiong</snm><fnm>H</fnm></au>
+    <au><snm>Yalin</snm><fnm>N</fnm></au>
+    <au><snm>Yamamoto</snm><fnm>Y</fnm></au>
+    <au><snm>Yatham</snm><fnm>LN</fnm></au>
+    <au><snm>Yocum</snm><fnm>AK</fnm></au>
+    <au><snm>Young</snm><fnm>AH</fnm></au>
+    <au><snm>Yüksel</snm><fnm>Z</fnm></au>
+    <au><snm>Zandi</snm><fnm>PP</fnm></au>
+    <au><snm>Zankl</snm><fnm>A</fnm></au>
+    <au><snm>Zarante</snm><fnm>I</fnm></au>
+    <au><snm>Zvolský</snm><fnm>M</fnm></au>
+    <au><snm>Toro</snm><fnm>S</fnm></au>
+    <au><snm>Carmody</snm><fnm>LC</fnm></au>
+    <au><snm>Harris</snm><fnm>NL</fnm></au>
+    <au><snm>Munoz Torres</snm><fnm>MC</fnm></au>
+    <au><snm>Danis</snm><fnm>D</fnm></au>
+    <au><snm>Mungall</snm><fnm>CJ</fnm></au>
+    <au><snm>Köhler</snm><fnm>S</fnm></au>
+    <au><snm>Haendel</snm><fnm>MA</fnm></au>
+    <au><snm>Robinson</snm><fnm>PN</fnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <publisher>Oxford University Press</publisher>
+  <pubdate>2024</pubdate>
+  <volume>52</volume>
+  <fpage>D1333</fpage>
+  <lpage>D1346</lpage>
+</bibl>
+
+<bibl id="B8">
+  <title><p>The STRING database in 2025: protein networks with directionality
+  of regulation</p></title>
+  <aug>
+    <au><snm>Szklarczyk</snm><fnm>D</fnm></au>
+    <au><snm>Nastou</snm><fnm>K</fnm></au>
+    <au><snm>Koutrouli</snm><fnm>M</fnm></au>
+    <au><snm>Kirsch</snm><fnm>R</fnm></au>
+    <au><snm>Mehryary</snm><fnm>F</fnm></au>
+    <au><snm>Hachilif</snm><fnm>R</fnm></au>
+    <au><snm>Hu</snm><fnm>D</fnm></au>
+    <au><snm>Peluso</snm><fnm>ME</fnm></au>
+    <au><snm>Huang</snm><fnm>Q</fnm></au>
+    <au><snm>Fang</snm><fnm>T</fnm></au>
+    <au><snm>Doncheva</snm><fnm>NT</fnm></au>
+    <au><snm>Pyysalo</snm><fnm>S</fnm></au>
+    <au><snm>Bork</snm><fnm>P</fnm></au>
+    <au><snm>Jensen</snm><fnm>LJ</fnm></au>
+    <au><snm>Mering</snm><fnm>CV</fnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <publisher>Oxford University Press</publisher>
+  <pubdate>2025</pubdate>
+  <volume>53</volume>
+  <fpage>D730</fpage>
+  <lpage>D737</lpage>
 </bibl>
 
 </refgrp>
