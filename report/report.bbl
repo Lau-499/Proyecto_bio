@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{8}
+\begin{thebibliography}{10}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -362,6 +362,34 @@ doi:\doiurl{10.1093/nar/gkae1113}
 \end{barticle}
 \endbibitem
 
+%%% 9
+\bibitem{Csardi2006}
+\begin{barticle}
+\bauthor{\bsnm{Csárdi}, \binits{G.}},
+\bauthor{\bsnm{Nepusz}, \binits{T.}}:
+\batitle{The igraph software package for complex network research}.
+\bjtitle{InterJournal}
+\bvolume{Complex Systems},
+\bfpage{1695}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem{Singlan2025}
+\begin{botherref}
+\oauthor{\bsnm{Singlan}, \binits{N.}},
+\oauthor{\bsnm{Choucha}, \binits{F.A.}},
+\oauthor{\bsnm{Pasquier}, \binits{C.}}:
+A new similarity based adapted louvain algorithm (simba) for active module
+  identification in p-value attributed biological networks.
+Scientific Reports
+\textbf{15}
+(2025).
+doi:\doiurl{10.1038/s41598-025-95749-6}
+\end{botherref}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -692,6 +720,34 @@ doi:\doiurl{10.1093/nar/gkae1113}
   <volume>53</volume>
   <fpage>D730</fpage>
   <lpage>D737</lpage>
+</bibl>
+
+<bibl id="B9">
+  <title><p>The igraph software package for complex network
+  research</p></title>
+  <aug>
+    <au><snm>Csárdi</snm><fnm>G</fnm></au>
+    <au><snm>Nepusz</snm><fnm>T</fnm></au>
+  </aug>
+  <source>InterJournal</source>
+  <pubdate>2006</pubdate>
+  <volume>Complex Systems</volume>
+  <fpage>1695</fpage>
+  <url>https://igraph.org</url>
+</bibl>
+
+<bibl id="B10">
+  <title><p>A new Similarity Based Adapted Louvain Algorithm (SIMBA) for active
+  module identification in p-value attributed biological networks</p></title>
+  <aug>
+    <au><snm>Singlan</snm><fnm>N</fnm></au>
+    <au><snm>Choucha</snm><fnm>FA</fnm></au>
+    <au><snm>Pasquier</snm><fnm>C</fnm></au>
+  </aug>
+  <source>Scientific Reports</source>
+  <publisher>Nature Research</publisher>
+  <pubdate>2025</pubdate>
+  <volume>15</volume>
 </bibl>
 
 </refgrp>

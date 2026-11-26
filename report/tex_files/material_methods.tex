@@ -1,1 +1,66 @@
 \section{Materiales y métodos}
+
+\subsection{Entorno computacional}
+
+El análisis que se ve a continuación se llevó a cabo en un entorno Linux, concretamente Ubuntu 24.04.5 LTS. Para el procesamiento de los datos y la realización de los análisis bioinformáticos se utilizó el lenguaje de programación R en su versión 4.3.3.
+
+La instalación de los paquetes necesarios se realizó a través de los repositorios CRAN y Bioconductor (versión 3.18). Para facilitar la preparación del entorno y la reproducibilidad del estudio, se desarrolló un script de Bash (\texttt{setup.sh}) encargado de instalar los paquetes en una biblioteca local del proyecto. Asimismo, se utilizó un segundo script (\texttt{launch.sh}) para automatizar la
+descarga y preparación de los datos, así como la ejecución secuencial de los distintos análisis.
+
+\subsection{Obtención de genes asociados al fenotipo}
+
+Para la obtención del conjunto inicial de genes se  utilizó la base de datos \textit{Human Phenotype Ontology} (HPO) \cite{Gargano2024}, seleccionando el fenotipo correspondiente al embarazo ectópico (HP:0031456).
+
+La descarga de los genes asociados a dicho fenotipo se realizó a través de la API de HPO mediante el comando \texttt{wget}, incluido en el script \texttt{launch.sh}. El archivo obtenido contenía los identificadores de NCBI Gene y los símbolos de los genes asociados al fenotipo.
+
+Posteriormente, se eliminaron los espacios en blanco mediante el comando \texttt{tr}, conservando las tabulaciones que separaban las columnas. Los datos procesados se almacenaron en un archivo en formato TSV (\texttt{genes.tsv}), que se utilizó como entrada para los análisis posteriores.
+
+\subsection{Construcción de la red de asociaciones proteicas}
+
+Para la obtención de las asociaciones funcionales entre las proteínas codificadas por los genes seleccionados, se utilizó la base de datos \textit{STRING} en su versión 12.5 \cite{Szklarczyk2025}, mediante el paquete de R \texttt{STRINGdb} (versión 2.14.3). Se seleccionó la especie \textit{Homo sapiens}, con identificador taxonómico 9606, y se estableció un umbral mínimo de 800, con el fin de seleccionar asociaciones respaldadas por un elevado nivel de confianza.
+
+En primer lugar, se realizó un mapeo de los símbolos génicos obtenidos de HPO a los identificadores proteicos de STRING. Los genes que no pudieron mapearse fueron excluidos de la construcción de la red y almacenados en un archivo independiente. Posteriormente, se obtuvieron las asociaciones entre las proteínas correspondientes a los genes mapeados, conservando la puntuación de confianza asociada a cada una de ellas.
+
+Los identificadores proteicos de STRING se sustituyeron por los símbolos génicos originales para facilitar la interpretación de la red. Asimismo, se eliminaron las asociaciones duplicadas y se almacenaron los datos procesados en un archivo en formato TSV (\texttt{red\_string.tsv}). A partir de estas asociaciones se construyó una red no dirigida mediante el paquete \texttt{igraph} (versión 2.3.4), en la que los nodos representan proteínas y las aristas las asociaciones funcionales entre ellas. Para los análisis topológicos posteriores se consideró una red no ponderada.
+
+Para la representación gráfica de la red se utilizó el algoritmo de Fruchterman-Reingold, estableciendo el tamaño de los nodos en función de su grado. Además, se fijó una semilla aleatoria de valor 123 para favorecer la reproducibilidad de la representación gráfica.
+
+\subsection{Análisis de las propiedades topológicas}
+
+Para estudiar la estructura de la red obtenida, se calcularon diferentes propiedades topológicas usando también el paquete \texttt{igraph} de R \cite{Csardi2006}. Este análisis se llevó a cabo en el script \texttt{03\_propiedades\_clustering.R}.
+
+En primer lugar, se determinó el número de nodos y aristas de la red, así como el grado medio, que indica el número medio de conexiones por nodo. También se calculó la densidad, definida como la proporción de aristas existentes respecto al total de aristas posibles, y la dispersión, obtenida como el complemento de la densidad.
+
+Para estudiar la conectividad de la red, se calculó el número de componentes conexas y la transitividad global, que mide la tendencia de los nodos a formar triángulos. Además, se obtuvo la longitud media de camino y el diámetro de la red, considerando únicamente las distancias entre nodos conectados directa o indirectamente.
+
+Por último, se calculó la asortatividad por grado, que permite determinar si los nodos tienden a conectarse con otros nodos de grado similar.
+
+Los valores obtenidos se almacenaron en el archivo \texttt{propiedades\_red.tsv} para su posterior análisis e interpretación.
+
+\subsection{Análisis de centralidad}
+
+Con el objetivo de identificar los nodos que ocupan posiciones destacadas dentro de la red, se calcularon dos medidas de centralidad mediante el paquete \texttt{igraph}: la centralidad de grado y la armónica. 
+
+La centralidad de grado indica el número de conexiones directas que presenta cada nodo, mientras que la centralidad armónica tiene en cuenta las distancias mínimas entre un nodo y el resto de los nodos de la red. Se optó por utilizar la centralidad armónica en lugar de la de cercanía, ya que la red no era conexa. Esta medida permite considerar los nodos no alcanzables sin que estos contribuyan al valor de la centralidad.
+
+Una vez calculadas ambas medidas, se ordenaron los genes de mayor a menor grado para identificar los diez genes con mayor número de conexiones. Los valores de centralidad de todos los nodos se almacenaron en el archivo \texttt{centralidad\_genes.tsv} para su posterior análisis.
+
+\subsection{Detección de comunidades}
+
+Para identificar grupos de proteínas con una mayor conectividad entre sí, se aplicó el algoritmo de Louvain mediante el paquete \texttt{igraph}. Este algoritmo permite detectar comunidades dentro de la red mediante la maximización de la modularidad, teniendo en cuenta la estructura y las conexiones de la red \cite{Singlan2025}. La modularidad es una medida que compara las conexiones existentes dentro de las comunidades con las esperadas según un modelo de referencia.
+
+Una vez identificadas las comunidades, se obtuvo el número total de comunidades, el número de nodos pertenecientes a cada una de ellas y la modularidad de la partición obtenida. La asignación de cada gen a su correspondiente comunidad se almacenó en el archivo \texttt{clusters.tsv}, que se utilizó posteriormente para el análisis de enriquecimiento funcional por comunidades.
+
+Finalmente, se realizó una representación gráfica de la red en la que se diferenciaron las comunidades obtenidas, utilizando el algoritmo de Fruchterman-Reingold. Se fijó una semilla aleatoria de valor 123 tanto para la detección de comunidades como para su representación gráfica, con el fin de favorecer la reproducibilidad del análisis.
+
+\subsection{Análisis de enriquecimiento funcional}
+
+Con el objetivo de identificar los procesos biológicos asociados a los genes estudiados, se realizó un análisis de enriquecimiento funcional mediante el script \texttt{enrichment.R}. Para ello, se utilizó el paquete \texttt{clusterProfiler} (versión 4.10.1), junto con la base de datos de anotaciones de genes humanos \texttt{org.Hs.eg.db} (versión 3.18.0).
+
+Se llevó a cabo un análisis de sobrerrepresentación (ORA) utilizando los términos de Gene Ontology (GO) correspondientes a la categoría de procesos biológicos (BP). Este análisis permite identificar los términos que aparecen en una lista de genes con una frecuencia superior a la esperada por azar, mediante un contraste basado en la distribución hipergeométrica. Para reducir la aparición de falsos positivos debidos a la realización de múltiples contrastes, se aplicó la corrección de Benjamini-Hochberg, estableciendo un umbral de significación de 0,05 para los valores p originales y ajustados, y de 0,2 para los valores q.
+
+En primer lugar, se realizó un análisis de enriquecimiento global utilizando la lista inicial de genes asociados al embarazo ectópico obtenida de HPO. Como población de referencia se empleó el conjunto de genes humanos con las anotaciones GO correspondientes, utilizado por defecto por la función de enriquecimiento.
+
+Posteriormente, se realizó un análisis de enriquecimiento por comunidades, seleccionando únicamente aquellas que contenían al menos cinco genes. En este caso, se utilizaron como población de referencia los genes de la red, con el objetivo de identificar procesos biológicos que pudieran estar especialmente representados en cada comunidad respecto al conjunto de la red.
+
+Los resultados de ambos análisis se almacenaron en archivos de formato CSV. Además, mediante el paquete \texttt{enrichplot} (versión 1.22.0), se generaron gráficos de puntos en los que se representaron hasta diez términos enriquecidos, siempre que se obtuvieran resultados significativos.
