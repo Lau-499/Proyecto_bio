@@ -12,3 +12,9 @@
 .RData
 .Rproj.user/
 
+# Archivos latex
+report/*.aux
+report/*.bbl
+report/*.blg
+report/*.log
+report/*.synctex.gz
