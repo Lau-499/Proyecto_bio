@@ -66,3 +66,38 @@ pdf(file.path(opt$outdir, "red_clusters.pdf"))
 plot(communities, g, layout = layout, vertex.size = 8,
      vertex.label.cex = 0.6, main = "Clustering con Louvain")
 dev.off()
+
+# 6. Comparar la modularidad con redes aleatorias
+set.seed(123)
+q_random <- replicate(100, modularity(cluster_louvain(sample_gnm(gorder(g), gsize(g)))))
+q_red <- modularity(communities)
+cat("Modularidad media en redes aleatorias:", mean(q_random), "\n")
+cat("Redes aleatorias con Q mayor o igual:", sum(q_random >= q_red), "de 100\n")
+
+pdf(file.path(opt$outdir, "modularidad_aleatoria.pdf"))
+hist(q_random, xlim = c(0, 0.5), col = "grey80", main = "Q en redes aleatorias equivalentes",
+     xlab = "Modularidad Q")
+abline(v = q_red, col = "red", lwd = 3)
+dev.off()
+
+# 7. Comparar Louvain con otros metodos de clustering
+metodos <- list(
+  "Edge betweenness"  = cluster_edge_betweenness,
+  "Walktrap"          = cluster_walktrap,
+  "Fast Greedy"       = cluster_fast_greedy,
+  "Louvain"           = cluster_louvain,
+  "Leiden"            = function(g) cluster_leiden(g, objective_function = "modularity"),
+  "Infomap"           = cluster_infomap,
+  "Label propagation" = cluster_label_prop
+)
+set.seed(123)
+resultados <- lapply(metodos, function(metodo) metodo(g))
+comparacion <- data.frame(
+  metodo = names(metodos),
+  comunidades = sapply(resultados, length),
+  Q = round(sapply(resultados, function(r) modularity(g, membership(r))), 3),
+  NMI_louvain = round(sapply(resultados, compare, communities, method = "nmi"), 2)
+)
+print(comparacion)
+write.table(comparacion, file.path(opt$outdir, "comparacion_clustering.tsv"),
+            sep = "\t", quote = FALSE, row.names = FALSE)
